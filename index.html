@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora USD a JPY</title>
+    <title>Calculadora JPY a USD</title>
     <style>
         * {
             box-sizing: border-box;
@@ -69,21 +69,21 @@
 <body>
     <div class="container">
         <div class="fee-info">Calculadora</div>
-        <h3>Monto en USD:</h3>
-        <input type="number" id="usd" placeholder="Ingrese el Monto en USD" oninput="convertirUSD()">
+        <h3>Monto en JPY:</h3>
+        <input type="number" id="jpy" placeholder="Ingrese el Monto en JPY" oninput="convertirJPY()">
         
         <div class="resultado-container">
-            <h4>Monto en JPY:</h4>
-            <p id="resultado">0.00 JPY</p>
+            <h4>Monto en USD:</h4>
+            <p id="resultado">0.00 USD</p>
         </div>
     </div>
 
     <script>
-    function convertirUSD() {
-        const tasaConversion = 116.28; // 1 USD = 116.28 JPY basado en 100 JPY = 0.86 USD
-        const usd = document.getElementById('usd').value;
-        let jpy = (usd * tasaConversion).toFixed(2);
-        document.getElementById('resultado').innerText = jpy + ' JPY';
+    function convertirJPY() {
+        const tasaConversion = 0.0086; // 100 JPY = 0.86 USD, entonces 1 JPY = 0.0086 USD
+        const jpy = document.getElementById('jpy').value;
+        let usd = (jpy * tasaConversion).toFixed(2);
+        document.getElementById('resultado').innerText = usd + ' USD';
     }
     </script>
 </body>
