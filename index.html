@@ -81,7 +81,7 @@
 
     <script>
     function convertirJPY() {
-        const tasaConversion = 0.0073; // 133,56 JPY = 0.73 USD, entonces 1 JPY = 0.0074 USD
+        const tasaConversion = 0.0100; // 133,56 JPY = 1.00 USD, entonces 1 JPY = 0.0074 USD
         const jpy = document.getElementById('jpy').value;
         let usd = (jpy * tasaConversion).toFixed(2);
         document.getElementById('resultado').innerText = usd + ' USD';
